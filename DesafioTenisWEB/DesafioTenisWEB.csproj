@@ -208,6 +208,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UserControls\PartidosPerfil.ascx" />
+    <Content Include="UserControls\PerfilTopUserControl.ascx" />
+    <Content Include="UserControls\RegistrarPostulacionAmistosoUserControl.ascx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -446,12 +449,33 @@
     <Compile Include="UserControls\LoginUserControl.ascx.designer.cs">
       <DependentUpon>LoginUserControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\PartidosPerfil.ascx.cs">
+      <DependentUpon>PartidosPerfil.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PartidosPerfil.ascx.designer.cs">
+      <DependentUpon>PartidosPerfil.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PerfilTopUserControl.ascx.cs">
+      <DependentUpon>PerfilTopUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PerfilTopUserControl.ascx.designer.cs">
+      <DependentUpon>PerfilTopUserControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PostulacionesUserControl.ascx.cs">
       <DependentUpon>PostulacionesUserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\PostulacionesUserControl.ascx.designer.cs">
       <DependentUpon>PostulacionesUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RegistrarPostulacionAmistosoUserControl.ascx.cs">
+      <DependentUpon>RegistrarPostulacionAmistosoUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RegistrarPostulacionAmistosoUserControl.ascx.designer.cs">
+      <DependentUpon>RegistrarPostulacionAmistosoUserControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\RegistroUserControl.ascx.cs">
       <DependentUpon>RegistroUserControl.ascx</DependentUpon>
