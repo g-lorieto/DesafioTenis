@@ -26,11 +26,11 @@ namespace Dominio
         public int Puntaje { get; set; }
 
 
-        public virtual List<Comentario> Comentarios { get; set; }
-        public virtual List<Mensaje> Mensajes { get; set; }
-        public virtual List<Campeonato> Campeonatos { get; set; }
-        public virtual List<Postulacion> Postulaciones { get; set; }
-        public virtual List<Partido> Partidos { get; set; }
+        public virtual ICollection<Comentario> Comentarios { get; set; }
+        public virtual ICollection<Mensaje> Mensajes { get; set; }
+        public virtual ICollection<Campeonato> Campeonatos { get; set; }
+        public virtual ICollection<Postulacion> Postulaciones { get; set; }
+        public virtual ICollection<Partido> Partidos { get; set; }
         
 
         public string NombreCompleto()
@@ -46,6 +46,11 @@ namespace Dominio
 
         public Jugador()
         {
+            this.Comentarios = new List<Comentario>();
+            this.Mensajes = new List<Mensaje>();
+            this.Campeonatos = new List<Campeonato>();
+            this.Postulaciones = new List<Postulacion>();
+            this.Partidos = new List<Partido>();
 
         }
     }

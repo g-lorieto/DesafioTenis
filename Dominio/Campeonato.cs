@@ -9,8 +9,6 @@ namespace Dominio
 {
     public class Campeonato
     {
-        
-
         public int CampeonatoId { get; set; }
         public string Nombre { get; set; }
         public int CantidadDeJugadores { get; set; }
@@ -20,7 +18,12 @@ namespace Dominio
  
 
         
-        public virtual List<Jugador> Participantes { get; set; }
+        public virtual ICollection<Jugador> Participantes { get; set; }
         public virtual Jugador Ganador { get; set; }
+
+        public Campeonato()
+        {
+            this.Participantes = new List<Jugador>();
+        }
     }
 }

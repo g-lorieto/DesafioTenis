@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Dominio
 {
@@ -13,7 +14,9 @@ namespace Dominio
         public bool Leido { get; set; }
         public DateTime Fecha { get; set; }
 
+        public int JugadorUnoId { get; set; }
         public virtual Jugador JugadorUno { get; set; }
+        public int JugadorDosId { get; set; }
         public virtual Jugador JugadorDos { get; set; }
         
         public Mensaje() { }

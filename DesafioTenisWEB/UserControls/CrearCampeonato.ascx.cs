@@ -18,7 +18,7 @@ namespace DesafioTenisWEB.UserControls
 
         protected void BtnCrearCampeonato_Click(object sender, EventArgs e)
         {
-            Campeonato.Tipos tipo;
+            Enums.TipoCampeonato tipo;
             Enum.TryParse(DDLTipo.SelectedValue, out tipo);
 
             Campeonato C = new Campeonato
@@ -37,7 +37,7 @@ namespace DesafioTenisWEB.UserControls
             DDLTipo.Items.Clear();
             DDLCantidadJugadores.Items.Clear();
 
-            foreach(string tipo in Enum.GetNames(typeof(Campeonato.Tipos)))
+            foreach(string tipo in Enum.GetNames(typeof(Enums.TipoCampeonato)))
             {
                 DDLTipo.Items.Add(new ListItem(tipo, tipo));
             }
