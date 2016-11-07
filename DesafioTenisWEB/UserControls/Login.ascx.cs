@@ -25,6 +25,7 @@ namespace DesafioTenisWEB.UserControls
                     Jugador J = LogicaJugador.Logueo(TxtEmail.Text, TxtContrasena.Text);
                     if (J != null)
                     {
+                        Session["Logueado"] = J;
                         LblMensaje.Text = "Logueado";
                     }
                 }

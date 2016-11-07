@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CrearCampeonatoUserControl.ascx.cs" Inherits="DesafioTenisWEB.UserControls.CrearCampeonatoUserControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CrearCampeonato.ascx.cs" Inherits="DesafioTenisWEB.UserControls.CrearCampeonatoUserControl" %>
 <asp:TextBox ID="TxtNombre" runat="server"></asp:TextBox>
 <asp:RequiredFieldValidator ID="RequiredNombre" runat="server"
     ControlToValidate="TxtNombre"

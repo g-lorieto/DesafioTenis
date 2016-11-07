@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RegistroUserControl.ascx.cs" Inherits="DesafioTenisWEB.UserControls.RegistroUserControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Registro.ascx.cs" Inherits="DesafioTenisWEB.UserControls.RegistroUserControl" %>
 <%@ Register Src="~/UserControls/JugadoresUserControl.ascx" TagPrefix="uc1" TagName="JugadoresUserControl" %>
 
 <asp:Label runat="server" Text="Email"></asp:Label>

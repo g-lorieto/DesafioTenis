@@ -209,9 +209,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UserControls\PartidosPerfil.ascx" />
-    <Content Include="UserControls\PerfilTopUserControl.ascx" />
-    <Content Include="UserControls\RegistrarPostulacionAmistosoUserControl.ascx" />
+    <Content Include="UserControls\PerfilTop.ascx" />
+    <Content Include="UserControls\AltaPostulacion.ascx" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -248,14 +249,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="UserControls\ActualizarDatosUserControl.ascx" />
-    <Content Include="UserControls\CategoriasUserControl.ascx" />
-    <Content Include="UserControls\CrearCampeonatoUserControl.ascx" />
-    <Content Include="UserControls\HabilitarJugadorUserControl.ascx" />
-    <Content Include="UserControls\JugadoresUserControl.ascx" />
-    <Content Include="UserControls\LoginUserControl.ascx" />
-    <Content Include="UserControls\PostulacionesUserControl.ascx" />
-    <Content Include="UserControls\RegistroUserControl.ascx" />
+    <Content Include="UserControls\ActualizarDatos.ascx" />
+    <Content Include="UserControls\Categorias.ascx" />
+    <Content Include="UserControls\CrearCampeonato.ascx" />
+    <Content Include="UserControls\HabilitarJugador.ascx" />
+    <Content Include="UserControls\Jugadores.ascx" />
+    <Content Include="UserControls\Login.ascx" />
+    <Content Include="UserControls\Postulaciones.ascx" />
+    <Content Include="UserControls\Registro.ascx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -407,47 +408,47 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="UserControls\ActualizarDatosUserControl.ascx.cs">
-      <DependentUpon>ActualizarDatosUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\ActualizarDatos.ascx.cs">
+      <DependentUpon>ActualizarDatos.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\ActualizarDatosUserControl.ascx.designer.cs">
-      <DependentUpon>ActualizarDatosUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\ActualizarDatos.ascx.designer.cs">
+      <DependentUpon>ActualizarDatos.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CategoriasUserControl.ascx.cs">
-      <DependentUpon>CategoriasUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Categorias.ascx.cs">
+      <DependentUpon>Categorias.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\CategoriasUserControl.ascx.designer.cs">
-      <DependentUpon>CategoriasUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Categorias.ascx.designer.cs">
+      <DependentUpon>Categorias.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\CrearCampeonatoUserControl.ascx.cs">
-      <DependentUpon>CrearCampeonatoUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\CrearCampeonato.ascx.cs">
+      <DependentUpon>CrearCampeonato.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\CrearCampeonatoUserControl.ascx.designer.cs">
-      <DependentUpon>CrearCampeonatoUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\CrearCampeonato.ascx.designer.cs">
+      <DependentUpon>CrearCampeonato.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\HabilitarJugadorUserControl.ascx.cs">
-      <DependentUpon>HabilitarJugadorUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\HabilitarJugador.ascx.cs">
+      <DependentUpon>HabilitarJugador.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\HabilitarJugadorUserControl.ascx.designer.cs">
-      <DependentUpon>HabilitarJugadorUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\HabilitarJugador.ascx.designer.cs">
+      <DependentUpon>HabilitarJugador.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\JugadoresUserControl.ascx.cs">
-      <DependentUpon>JugadoresUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Jugadores.ascx.cs">
+      <DependentUpon>Jugadores.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\JugadoresUserControl.ascx.designer.cs">
-      <DependentUpon>JugadoresUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Jugadores.ascx.designer.cs">
+      <DependentUpon>Jugadores.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\LoginUserControl.ascx.cs">
-      <DependentUpon>LoginUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\LoginUserControl.ascx.designer.cs">
-      <DependentUpon>LoginUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\PartidosPerfil.ascx.cs">
       <DependentUpon>PartidosPerfil.ascx</DependentUpon>
@@ -456,33 +457,33 @@
     <Compile Include="UserControls\PartidosPerfil.ascx.designer.cs">
       <DependentUpon>PartidosPerfil.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\PerfilTopUserControl.ascx.cs">
-      <DependentUpon>PerfilTopUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\PerfilTop.ascx.cs">
+      <DependentUpon>PerfilTop.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\PerfilTopUserControl.ascx.designer.cs">
-      <DependentUpon>PerfilTopUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\PerfilTop.ascx.designer.cs">
+      <DependentUpon>PerfilTop.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\PostulacionesUserControl.ascx.cs">
-      <DependentUpon>PostulacionesUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Postulaciones.ascx.cs">
+      <DependentUpon>Postulaciones.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\PostulacionesUserControl.ascx.designer.cs">
-      <DependentUpon>PostulacionesUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Postulaciones.ascx.designer.cs">
+      <DependentUpon>Postulaciones.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\RegistrarPostulacionAmistosoUserControl.ascx.cs">
-      <DependentUpon>RegistrarPostulacionAmistosoUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\AltaPostulacion.ascx.cs">
+      <DependentUpon>AltaPostulacion.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\RegistrarPostulacionAmistosoUserControl.ascx.designer.cs">
-      <DependentUpon>RegistrarPostulacionAmistosoUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\AltaPostulacion.ascx.designer.cs">
+      <DependentUpon>AltaPostulacion.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\RegistroUserControl.ascx.cs">
-      <DependentUpon>RegistroUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Registro.ascx.cs">
+      <DependentUpon>Registro.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\RegistroUserControl.ascx.designer.cs">
-      <DependentUpon>RegistroUserControl.ascx</DependentUpon>
+    <Compile Include="UserControls\Registro.ascx.designer.cs">
+      <DependentUpon>Registro.ascx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -497,6 +498,13 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

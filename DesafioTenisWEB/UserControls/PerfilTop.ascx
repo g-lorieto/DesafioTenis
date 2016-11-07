@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PerfilTopUserControl.ascx.cs" Inherits="DesafioTenisWEB.UserControls.PerfilTopUserControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PerfilTop.ascx.cs" Inherits="DesafioTenisWEB.UserControls.PerfilTopUserControl" %>
 <asp:Repeater runat="server" ID="UdpPerfilTop">
     <ItemTemplate>
         <asp:Image runat="server" ID="ImgPerfil" AlternateText='<%#Eval("NombreCompleto") %>' ImageUrl='<%#Eval("Foto") %>' />

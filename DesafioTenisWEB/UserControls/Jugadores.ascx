@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="JugadoresUserControl.ascx.cs" Inherits="DesafioTenisWEB.UserControls.JugadoresUserControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Jugadores.ascx.cs" Inherits="DesafioTenisWEB.UserControls.JugadoresUserControl" %>
 <asp:Repeater ID="RepeaterJugadores" runat="server">
     <ItemTemplate>
         <asp:LinkButton runat="server" OnClick="GoToPerfil_Click" CommandArgument='<%#Eval("Id")%>'>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PostulacionesUserControl.ascx.cs" Inherits="DesafioTenisWEB.UserControls.PostulacionesUserControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Postulaciones.ascx.cs" Inherits="DesafioTenisWEB.UserControls.PostulacionesUserControl" %>
 <asp:Repeater ID="RepeaterPostulaciones" runat="server">
     <HeaderTemplate>
         <table id="TablaPustulaciones">

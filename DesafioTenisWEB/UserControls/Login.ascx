@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LoginUserControl.ascx.cs" Inherits="DesafioTenisWEB.UserControls.LoginUserControl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Login.ascx.cs" Inherits="DesafioTenisWEB.UserControls.LoginUserControl" %>
 
 <asp:TextBox runat="server" ID="TxtEmail" placeholder="Email"></asp:TextBox>
 <asp:RequiredFieldValidator ID="RequiredEmail" runat="server"

@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="RegistrarPostulacionAmistosoUserControl.ascx.cs" Inherits="DesafioTenisWEB.UserControls.RegistrarPostulacion" %>
-<asp:Panel ID="PanelPostualcion" DefaultButton="registrarPostulacion" runat="server">
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AltaPostulacion.ascx.cs" Inherits="DesafioTenisWEB.UserControls.RegistrarPostulacion" %>
+<asp:Panel ID="PanelPostualcion" DefaultButton="BtnRegistrarPostulacion" runat="server">
     <asp:Label runat="server">Fecha: </asp:Label>
     <asp:TextBox runat="server" ID="TxtFecha" TextMode="date" placeholder="Ingrese una fecha..."></asp:TextBox>
     <asp:RequiredFieldValidator ID="RequiredFecha" runat="server"
@@ -23,5 +23,5 @@
     <asp:TextBox runat="server" ID="TxtComentario" CssClass="form-control" TextMode="Multiline" placeholder="Enter ..."></asp:TextBox>
 
     <asp:HiddenField runat="server" ID="HdnPostulacionAmistoso" />
-    <asp:Button ID="RegistrarPostulacionAmistoso" runat="server" OnClick="RegistrarPostulacionAmistoso_Click" Text="Postularme/Amistoso" />
+    <asp:Button ID="BtnRegistrarPostulacion" runat="server" OnClick="RegistrarPostulacion_Click" Text="Postularme" />
 </asp:Panel>

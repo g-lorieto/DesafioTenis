@@ -8,6 +8,8 @@ namespace Dominio
 {
     public class Partido
     {
+        
+
         public int PartidoId { get; set; }        
         public DateTime Fecha { get; set; }
         public string Lugar { get; set; }

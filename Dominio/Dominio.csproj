@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Campeonato.cs" />
     <Compile Include="Comentario.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Jugador.cs" />
     <Compile Include="Mensaje.cs" />
     <Compile Include="Partido.cs" />
