@@ -22,8 +22,6 @@ namespace Persistencia
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-
             modelBuilder.Entity<Jugador>()
                 .HasMany(x => x.Campeonatos)
                 .WithMany(x => x.Participantes)
@@ -33,28 +31,9 @@ namespace Persistencia
                     x.MapLeftKey("CampeonatoId");
                     x.MapRightKey("JugadorId");
                 });
+            
 
-            modelBuilder.Entity<Jugador>()
-                .HasMany<Mensaje>(x => x.Mensajes)
-                .WithRequired(x => x.JugadorUno)
-                .HasForeignKey(x => x.JugadorUnoId);
-
-            modelBuilder.Entity<Jugador>()
-                .HasMany<Mensaje>(x => x.Mensajes)
-                .WithRequired(x => x.JugadorDos)
-                .HasForeignKey(x => x.JugadorDosId);
-
-            /*modelBuilder.Entity<Mensaje>()
-                .HasRequired<Jugador>(x => x.JugadorUno)
-                .WithMany(x => x.Mensajes)
-                .HasForeignKey(x => x.JugadorUnoId);
-
-            modelBuilder.Entity<Mensaje>()
-                .HasRequired<Jugador>(x => x.JugadorDos)
-                .WithMany(x => x.Mensajes)
-                .HasForeignKey(x => x.JugadorDosId);*/
-
-
+            base.OnModelCreating(modelBuilder);
 
 
         }
