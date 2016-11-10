@@ -59,6 +59,20 @@ namespace Persistencia
                     return new List<Partido>();
             }
         }
+
+        public static void ConfirmarPostulacionEnPartido(Jugador jugador, Postulacion postulacion)
+        {
+            Partido P = new Partido
+            {
+                JugadorDesafiante = postulacion.Jugador,
+                JugadorDesafiado = jugador,
+                Fecha = postulacion.Fecha,
+                Lugar = postulacion.Lugar,
+                Comentario = postulacion.Comentario
+            };
+            Add(P);
+        }
+
         public static List<Partido> FindByJugadorCalificar(int id)
         {
             using (DesafioContext db = new DesafioContext())

@@ -13,14 +13,31 @@ namespace DesafioTenisWEB.UserControls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Logueado"] != null)
+            {
+                int jugadorId = ((Jugador)Session["Logueado"]).JugadorId;
+                var postulaciones = LogicaPostulacion.FindAllOrdenadoPorFecha(jugadorId);
+                if (postulaciones.Count > 0)
+                {
+                    RepeaterPostulaciones.DataSource = postulaciones;
+                }
+                else
+                {
+                    //postulaciones vacias
+                }
+            }
         }
 
         protected void BtnConfirmar_Click(object sender, EventArgs e)
         {
+            if (HdnIdPostulacion.Value != null)
+            {
+                int postulacionId = int.Parse(HdnIdPostulacion.Value);
+                int jugadorId = ((Jugador)Session["Logueado"]).JugadorId;
+                LogicaPartido.ConfirmarPostulacionEnPartido(jugadorId, postulacionId);
+            }
 
-
-        }  
+        }
 
         protected void LinkBDetalles_Click(object sender, EventArgs e)
         {
