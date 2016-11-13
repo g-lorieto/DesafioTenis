@@ -14,7 +14,7 @@ namespace Dominio
         public bool Leido { get; set; }
         public DateTime Fecha { get; set; }
         
-
+        
         public virtual Jugador JugadorUno { get; set; }
         public virtual Jugador JugadorDos { get; set; }
 

@@ -2,6 +2,8 @@
 
 
 <%@ Register Src="~/UserControls/Login.ascx" TagPrefix="uc1" TagName="LoginUserControl" %>
+<%@ Register Src="~/UserControls/Registro.ascx" TagPrefix="uc1" TagName="Registro" %>
+
 
 
 
@@ -14,6 +16,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
+
+        <br />
         <uc1:LoginUserControl runat="server" id="LoginUserControl" />
     </div>
     </form>

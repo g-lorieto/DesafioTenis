@@ -208,9 +208,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UserControls\MensajeNuevo.ascx" />
     <Content Include="UserControls\PartidosPerfil.ascx" />
     <Content Include="UserControls\PerfilTop.ascx" />
     <Content Include="UserControls\AltaPostulacion.ascx" />
+    <Content Include="UserControls\VerMensaje.ascx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -450,6 +452,13 @@
     <Compile Include="UserControls\Login.ascx.designer.cs">
       <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MensajeNuevo.ascx.cs">
+      <DependentUpon>MensajeNuevo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MensajeNuevo.ascx.designer.cs">
+      <DependentUpon>MensajeNuevo.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PartidosPerfil.ascx.cs">
       <DependentUpon>PartidosPerfil.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -484,6 +493,13 @@
     </Compile>
     <Compile Include="UserControls\Registro.ascx.designer.cs">
       <DependentUpon>Registro.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\VerMensaje.ascx.cs">
+      <DependentUpon>VerMensaje.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\VerMensaje.ascx.designer.cs">
+      <DependentUpon>VerMensaje.ascx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -524,6 +540,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+  <PropertyGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />

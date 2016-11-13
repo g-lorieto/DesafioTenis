@@ -22,12 +22,21 @@ namespace DesafioTenisWEB {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// AltaPostulacion control.
+        /// MensajeNuevo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DesafioTenisWEB.UserControls.RegistrarPostulacion AltaPostulacion;
+        protected global::DesafioTenisWEB.UserControls.MensajeNuevo MensajeNuevo;
+        
+        /// <summary>
+        /// VerMensaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DesafioTenisWEB.UserControls.VerMensaje VerMensaje;
     }
 }

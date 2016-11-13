@@ -10,13 +10,13 @@ namespace Logica
 {
     public class LogicaPostulacion
     {
-        public static void Add(Postulacion p)
+        public static void Add(Postulacion p, int postulanteId)
         {
             if (p == null)
                 throw new Exception("Error al cargar el parido");
             else
             
-                PersistenciaPostulacion.Add(p);
+                PersistenciaPostulacion.Add(p, postulanteId);
         }
 
         public static void Update(Postulacion p)
@@ -41,9 +41,9 @@ namespace Logica
             return PersistenciaPostulacion.FindByJugador(id);
            
         }
-        public static List<Postulacion> FindAllOrdenadoPorFecha()
+        public static List<Postulacion> FindAllOrdenadoPorFecha(int idJugadorExcluido)
         {
-            return PersistenciaPostulacion.FindAllOrdenadasPorFecha();
+            return PersistenciaPostulacion.FindAllOrdenadasPorFecha(idJugadorExcluido);
         }
     }
 }

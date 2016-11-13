@@ -15,7 +15,7 @@ namespace Persistencia
     {
         
 
-        public static void Add(Postulacion p)
+        public static void Add(Postulacion p, int postulanteId)
         {
             // en pagina de postulaciones ver Postulacion con boton de "Coordinar con el rival"
             // en el chat, que haya un boton para cofirmar partido(postulante)
@@ -25,6 +25,8 @@ namespace Persistencia
             {
                 using (DesafioContext db = new DesafioContext())
                 {
+                    Jugador postulante = db.Jugadores.FirstOrDefault(x => x.JugadorId == postulanteId);
+                    p.Jugador = postulante;
                     db.Postulaciones.Add(p);
                     db.SaveChanges();
                 }
@@ -99,11 +101,11 @@ namespace Persistencia
                 
             }          
         }
-        public static List<Postulacion> FindAllOrdenadasPorFecha()
+        public static List<Postulacion> FindAllOrdenadasPorFecha(int idJugadorExcluido)
         {
             using (DesafioContext db = new DesafioContext())
             {
-                var postulaciones = db.Postulaciones.OrderByDescending(x => x.Fecha);
+                var postulaciones = db.Postulaciones.Where(x => x.Jugador.JugadorId != idJugadorExcluido).OrderByDescending(x => x.Fecha);
                 if (postulaciones != null)
                     return postulaciones.ToList();
                 else

@@ -8,18 +8,18 @@ using Persistencia;
 
 namespace Logica
 {
-    public class LogicaMensaje
+    public static class LogicaMensaje
     {
-        public void Add(Mensaje mensaje)
+        public static void Add(Mensaje mensaje, int jugadorUno, int jugadorDos)
         {
-            PersistenciaMensaje.Add(mensaje);
+            PersistenciaMensaje.Add(mensaje, jugadorUno, jugadorDos);
         }
-        public void Delete(int idMensaje)
+        public static void Delete(int idMensaje)
         {
             PersistenciaMensaje.Delete(idMensaje);
         }
  
-        public List<Mensaje> FindByJugador(int idJugador)
+        public static List<Mensaje> FindByJugador(int idJugador)
         {
             return PersistenciaMensaje.FindByJugador(idJugador);
         }

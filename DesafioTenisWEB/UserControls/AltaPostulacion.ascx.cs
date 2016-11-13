@@ -20,15 +20,15 @@ namespace DesafioTenisWEB.UserControls
         {
             if (DDLHoras.SelectedValue != null)
             {
+                int postulanteId = ((Jugador)Session["Logueado"]).JugadorId;
                 Postulacion P = new Postulacion
-                {
-                    Jugador = (Jugador)Session["Logueado"],
+                {   
                     Comentario = TxtComentario.Text,
                     Fecha = DateTime.Parse(TxtFecha.Text + " " + DDLHoras.SelectedValue),
                     Lugar = TxtLugar.Text,
                     Confirmada = false
                 };
-                LogicaPostulacion.Add(P);
+                LogicaPostulacion.Add(P, postulanteId);
             }
         }
 

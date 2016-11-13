@@ -12,7 +12,7 @@ namespace Persistencia
 {
     public class PersistenciaMensaje
     {
-        public static void Add(Mensaje mensaje)
+        public static void Add(Mensaje mensaje, int jugadorUno, int jugadorDos)
         {
             try
             {
@@ -20,6 +20,10 @@ namespace Persistencia
                 {
                     if (mensaje != null)
                     {
+                        Jugador uno = db.Jugadores.FirstOrDefault(x => x.JugadorId == jugadorUno);
+                        Jugador dos = db.Jugadores.FirstOrDefault(x => x.JugadorId == jugadorDos);
+                        mensaje.JugadorUno = uno;
+                        mensaje.JugadorDos = dos;
                         db.Mensajes.Add(mensaje);
                         db.SaveChanges();
                     }
@@ -38,7 +42,7 @@ namespace Persistencia
             {
                 using (DesafioContext db = new DesafioContext())
                 {
-                    var mensajes = db.Mensajes.Where(x => x.JugadorDos.JugadorId == idJugador || x.JugadorUno.JugadorId == idJugador);
+                    var mensajes = db.Mensajes.Include("JugadorUno").Include("JugadorDos").Where(x => x.JugadorUno.JugadorId == idJugador || x.JugadorDos.JugadorId == idJugador);
                     if (mensajes != null)
                         return mensajes.ToList();
                     else
