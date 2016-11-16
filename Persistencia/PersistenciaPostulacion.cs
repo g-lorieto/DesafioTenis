@@ -97,7 +97,7 @@ namespace Persistencia
         {
             using (DesafioContext db = new DesafioContext())
             {
-                return db.Postulaciones.FirstOrDefault(x => x.PostulacionId == id);
+                return db.Postulaciones.Where(x => x.PostulacionId == id).Include("Jugador").FirstOrDefault();
                 
             }          
         }
@@ -105,7 +105,7 @@ namespace Persistencia
         {
             using (DesafioContext db = new DesafioContext())
             {
-                var postulaciones = db.Postulaciones.Where(x => x.Jugador.JugadorId != idJugadorExcluido).OrderByDescending(x => x.Fecha);
+                var postulaciones = db.Postulaciones.Where(x => x.Jugador.JugadorId == idJugadorExcluido).OrderByDescending(x => x.Fecha).Include("Jugador");
                 if (postulaciones != null)
                     return postulaciones.ToList();
                 else

@@ -20,6 +20,7 @@ namespace DesafioTenisWEB.UserControls
                 if (postulaciones.Count > 0)
                 {
                     RepeaterPostulaciones.DataSource = postulaciones;
+                    RepeaterPostulaciones.DataBind();
                 }
                 else
                 {
