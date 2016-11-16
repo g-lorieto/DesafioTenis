@@ -24,7 +24,7 @@ namespace DesafioTenisWEB.UserControls
                 }
                 else
                 {
-                    //postulaciones vacias
+                    //postulaciones vacia
                 }
             }
         }
