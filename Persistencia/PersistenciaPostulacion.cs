@@ -105,7 +105,7 @@ namespace Persistencia
         {
             using (DesafioContext db = new DesafioContext())
             {
-                var postulaciones = db.Postulaciones.Where(x => x.Jugador.JugadorId != idJugadorExcluido).OrderByDescending(x => x.Fecha).Include("Jugador");
+                var postulaciones = db.Postulaciones.Where(x => x.Jugador.JugadorId != idJugadorExcluido && x.Confirmada == false).OrderByDescending(x => x.Fecha).Include("Jugador");
                 if (postulaciones != null)
                     return postulaciones.ToList();
                 else

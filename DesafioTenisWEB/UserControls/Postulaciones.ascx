@@ -6,17 +6,11 @@
     <ItemTemplate>
         <tr>
             <td>
-                <asp:HyperLink runat="server" Text='<%#Eval("Jugador.Nombre") + " " + Eval("Jugador.Apellido") %>' NavigateUrl='~/Perfil.aspx?Jugador=<%#Eval("Jugador.Id")%>'></asp:HyperLink>
+                <asp:HyperLink runat="server" Text='<%#Eval("Jugador") + " " + Eval("Jugador.Apellido") %>' NavigateUrl='~/Perfil.aspx?Jugador=<%#Eval("Jugador.Id")%>'></asp:HyperLink>
             </td>
             <td>
                 <asp:Label runat="server" Text='<%#Eval("Fecha", "{0:dd/MM/yyyy}")%>'></asp:Label>
-            </td>
-            <td>
-                <asp:Label runat="server" Text='<%#Eval("Comentario")%>'></asp:Label>
-            </td>
-            <td>
-                <asp:Label runat="server" Text='<%#Eval("Lugar")%>'></asp:Label>
-            </td>
+            </td>          
             <td>
                 <asp:LinkButton runat="server" Text="Ver Detalles" CommandArgument='<%#Eval("PostulacionId") %>' ID="LinkBDetalles" OnClick="LinkBDetalles_Click"></asp:LinkButton>
             </td>

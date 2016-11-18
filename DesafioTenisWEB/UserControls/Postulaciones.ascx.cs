@@ -33,9 +33,10 @@ namespace DesafioTenisWEB.UserControls
         {
             if (HdnIdPostulacion.Value != null)
             {
+                string comentarioNuevo = TxtMensaje.Text;
                 int postulacionId = int.Parse(HdnIdPostulacion.Value);
                 int jugadorId = ((Jugador)Session["Logueado"]).JugadorId;
-                LogicaPartido.ConfirmarPostulacionEnPartido(jugadorId, postulacionId);
+                LogicaPartido.ConfirmarPostulacionEnPartido(jugadorId, postulacionId, comentarioNuevo);
             }
 
         }

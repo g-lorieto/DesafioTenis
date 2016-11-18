@@ -15,8 +15,8 @@ namespace Persistencia
     public class PersistenciaPartido
     {
 
-       
-        
+
+
         public static void Add(Partido p)
         {
             // cartel de aviso con las tareas pendientes (calificaciones y comentario).
@@ -27,7 +27,7 @@ namespace Persistencia
                 {
                     db.Partidos.Add(p);
                     db.SaveChanges();
-                }                
+                }
             }
             catch
             {
@@ -60,17 +60,24 @@ namespace Persistencia
             }
         }
 
-        public static void ConfirmarPostulacionEnPartido(Jugador jugador, Postulacion postulacion)
+        public static void ConfirmarPostulacionEnPartido(int jugadorId, int postulacionId, string comentarioNuevo)
         {
-            Partido P = new Partido
+            using (DesafioContext db = new DesafioContext())
             {
-                JugadorDesafiante = postulacion.Jugador,
-                JugadorDesafiado = jugador,
-                Fecha = postulacion.Fecha,
-                Lugar = postulacion.Lugar,
-                Comentario = postulacion.Comentario
-            };
-            Add(P);
+                Jugador jugador = db.Jugadores.FirstOrDefault(x => x.JugadorId == jugadorId);
+                Postulacion postulacion = db.Postulaciones.FirstOrDefault(x => x.PostulacionId == postulacionId);
+                Partido P = new Partido
+                {
+                    JugadorDesafiante = postulacion.Jugador,
+                    JugadorDesafiado = jugador,
+                    Fecha = postulacion.Fecha,
+                    Lugar = postulacion.Lugar,
+                    Comentario = postulacion.Comentario + ". " + comentarioNuevo
+                };
+                postulacion.Confirmada = true;                
+                db.Partidos.Add(P);
+                db.SaveChanges();
+            }
         }
 
         public static List<Partido> FindByJugadorCalificar(int id)
@@ -94,7 +101,7 @@ namespace Persistencia
                 if (partido == null)
                     return false;
                 return true;
-                
+
             }
         }
 
@@ -142,7 +149,7 @@ namespace Persistencia
 
         public static List<Partido> FindAll()
         {
-           
+
             try
             {
                 using (DesafioContext db = new DesafioContext())

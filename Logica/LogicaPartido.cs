@@ -44,11 +44,9 @@ namespace Logica
             return PersistenciaPartido.TienePartido(idJugador, fecha);
         }
 
-        public static void ConfirmarPostulacionEnPartido(int jugadorId, int postulacionId)
-        {
-            Postulacion postulacion = LogicaPostulacion.FindbyId(postulacionId);
-            Jugador jugador = LogicaJugador.FindbyId(jugadorId);
-            PersistenciaPartido.ConfirmarPostulacionEnPartido(jugador, postulacion);
+        public static void ConfirmarPostulacionEnPartido(int jugadorId, int postulacionId, string comentarioNuevo)
+        {            
+            PersistenciaPartido.ConfirmarPostulacionEnPartido(jugadorId, postulacionId, comentarioNuevo);
         }
 
         public static List<Partido> FindByMonth()
