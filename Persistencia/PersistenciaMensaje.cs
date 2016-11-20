@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using Dominio;
+using System.Data.Entity;
 
 namespace Persistencia
 {
@@ -28,7 +29,7 @@ namespace Persistencia
                         db.SaveChanges();
                     }
                 }
-               
+
             }
             catch
             {
@@ -36,13 +37,52 @@ namespace Persistencia
             }
         }
 
+        public static List<Mensaje> FindByJugadores(int idJugadorUno, int idJugadorDos)
+        {
+            using (DesafioContext db = new DesafioContext())
+            {
+                var mensajes = db.Mensajes
+                    .Where(x => (x.JugadorUno.JugadorId == idJugadorUno && x.JugadorDos.JugadorId == idJugadorDos)
+                || (x.JugadorUno.JugadorId == idJugadorDos && x.JugadorDos.JugadorId == idJugadorUno))
+                .Include(x => x.JugadorUno)
+                .Include(x => x.JugadorDos);
+
+                if (mensajes != null)
+                    return mensajes.ToList();
+                else
+                    return new List<Mensaje>();
+            }
+        }
+
+        public static List<Mensaje> FindByJugadorAgrupado(int idJugador)
+        {
+            using (DesafioContext db = new DesafioContext())
+            {
+                var agrupados = (from m in db.Mensajes
+                                where m.JugadorUno.JugadorId == idJugador || m.JugadorDos.JugadorId == idJugador
+                                let otroJugadorId = (m.JugadorUno.JugadorId == idJugador) ? m.JugadorDos.JugadorId : m.JugadorUno.JugadorId
+                                group m by otroJugadorId into g
+                                select g.OrderByDescending(m => m.Fecha).FirstOrDefault())
+                                .Include(x => x.JugadorUno)
+                                .Include(x => x.JugadorDos);
+
+                if (agrupados != null)
+                    return agrupados.ToList();
+                else
+                    return new List<Mensaje>();
+            }
+        }
+
         public static List<Mensaje> FindByJugador(int idJugador)
-        {            
+        {
             try
             {
                 using (DesafioContext db = new DesafioContext())
                 {
-                    var mensajes = db.Mensajes.Include("JugadorUno").Include("JugadorDos").Where(x => x.JugadorUno.JugadorId == idJugador || x.JugadorDos.JugadorId == idJugador);
+                    var mensajes = db.Mensajes.Where(x => x.JugadorUno.JugadorId == idJugador || x.JugadorDos.JugadorId == idJugador)
+                        .Include(x => x.JugadorUno)
+                        .Include(x => x.JugadorDos);
+
                     if (mensajes != null)
                         return mensajes.ToList();
                     else
@@ -74,8 +114,8 @@ namespace Persistencia
                 throw new Exception("Error al generar el Resultado del partido - Verifique los Datos");
             }
         }
-        
-      
+
+
 
 
 

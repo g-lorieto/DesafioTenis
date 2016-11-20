@@ -16,7 +16,7 @@ namespace DesafioTenisWEB.UserControls
             if (!IsPostBack)
             {
                 int jugadorId = ((Jugador)Session["Logueado"]).JugadorId;
-                var mensajes = LogicaMensaje.FindByJugador(jugadorId);
+                var mensajes = LogicaMensaje.FindByJugadores(jugadorId, 5);
                 RptMensajes.DataSource = mensajes;
                 RptMensajes.DataBind();
             }

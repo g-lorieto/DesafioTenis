@@ -24,5 +24,15 @@ namespace Logica
             return PersistenciaMensaje.FindByJugador(idJugador);
         }
 
+        public static List<Mensaje> FindByJugadores(int idJugadorUno, int idJugadorDos)
+        {
+            return PersistenciaMensaje.FindByJugadores(idJugadorUno, idJugadorDos);
+        }
+
+        public static List<Mensaje> FindByJugadorAgrupado(int idJugador)
+        {
+            return PersistenciaMensaje.FindByJugadorAgrupado(idJugador);
+        }
+
     }
 }
