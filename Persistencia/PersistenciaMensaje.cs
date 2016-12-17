@@ -115,6 +115,18 @@ namespace Persistencia
             }
         }
 
+        public static void MarcarComoLeido(int idMensaje)
+        {
+            try
+            {
+                using (DesafioContext db = new DesafioContext())
+                {
+                    Mensaje leido = db.Mensajes.FirstOrDefault(x => x.MensajeId == idMensaje);
+                    leido.Leido = true;
+                    db.SaveChanges();
+                }
+            }
+        }
 
 
 

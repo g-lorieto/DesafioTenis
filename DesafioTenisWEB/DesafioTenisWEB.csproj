@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -212,6 +216,7 @@
     <Content Include="UserControls\PartidosPerfil.ascx" />
     <Content Include="UserControls\PerfilTop.ascx" />
     <Content Include="UserControls\AltaPostulacion.ascx" />
+    <Content Include="UserControls\UploadImagen.ascx" />
     <Content Include="UserControls\VerMensaje.ascx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -496,6 +501,13 @@
     </Compile>
     <Compile Include="UserControls\Registro.ascx.designer.cs">
       <DependentUpon>Registro.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UploadImagen.ascx.cs">
+      <DependentUpon>UploadImagen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UploadImagen.ascx.designer.cs">
+      <DependentUpon>UploadImagen.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\VerMensaje.ascx.cs">
       <DependentUpon>VerMensaje.ascx</DependentUpon>

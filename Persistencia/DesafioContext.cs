@@ -16,6 +16,7 @@ namespace Persistencia
         public DbSet<Partido> Partidos { get; set; }
         public DbSet<Postulacion> Postulaciones { get; set; }
         public DbSet<Campeonato> Campeonatos { get; set; }
+        public DbSet<Imagen> Imagenes { get; set; }
         public DesafioContext():base("DefaultConnection")
         {
             

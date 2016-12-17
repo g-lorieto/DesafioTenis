@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="LogicaCampeonato.cs" />
     <Compile Include="LogicaComentario.cs" />
+    <Compile Include="LogicaImagen.cs" />
     <Compile Include="LogicaJugador.cs" />
     <Compile Include="LogicaMensaje.cs" />
     <Compile Include="LogicaPartido.cs" />

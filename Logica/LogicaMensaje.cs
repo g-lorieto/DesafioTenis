@@ -34,5 +34,10 @@ namespace Logica
             return PersistenciaMensaje.FindByJugadorAgrupado(idJugador);
         }
 
+        public static void MarcarComoLeido(int idMensaje)
+        {
+            PersistenciaMensaje.MarcarComoLeido(idMensaje);
+        }
+
     }
 }

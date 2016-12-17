@@ -53,6 +53,7 @@
     <Compile Include="Login.cs" />
     <Compile Include="PersistenciaCampeonato.cs" />
     <Compile Include="PersistenciaComentario.cs" />
+    <Compile Include="PersistenciaImagen.cs" />
     <Compile Include="PersistenciaJugador.cs" />
     <Compile Include="PersistenciaMensaje.cs" />
     <Compile Include="PersistenciaPartido.cs" />
