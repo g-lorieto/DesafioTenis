@@ -217,6 +217,7 @@
     <Content Include="UserControls\PerfilTop.ascx" />
     <Content Include="UserControls\AltaPostulacion.ascx" />
     <Content Include="UserControls\UploadImagen.ascx" />
+    <Content Include="UserControls\VerFotos.ascx" />
     <Content Include="UserControls\VerMensaje.ascx" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -508,6 +509,13 @@
     </Compile>
     <Compile Include="UserControls\UploadImagen.ascx.designer.cs">
       <DependentUpon>UploadImagen.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\VerFotos.ascx.cs">
+      <DependentUpon>VerFotos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\VerFotos.ascx.designer.cs">
+      <DependentUpon>VerFotos.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\VerMensaje.ascx.cs">
       <DependentUpon>VerMensaje.ascx</DependentUpon>

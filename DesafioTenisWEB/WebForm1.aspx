@@ -1,8 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="DesafioTenisWEB.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="DesafioTenisWEB.WebForm1" EnableEventValidation="false"%>
 
 
-<%@ Register Src="~/UserControls/Login.ascx" TagPrefix="uc1" TagName="LoginUserControl" %>
-<%@ Register Src="~/UserControls/Registro.ascx" TagPrefix="uc1" TagName="Registro" %>
+
+
+<%@ Register Src="~/UserControls/UploadImagen.ascx" TagPrefix="uc1" TagName="UploadImagen" %>
+<%@ Register Src="~/UserControls/VerFotos.ascx" TagPrefix="uc2" TagName="VerFotos" %>
+
+
 
 
 
@@ -16,9 +20,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-
-        <br />
-        <uc1:LoginUserControl runat="server" id="LoginUserControl" />
+        <uc1:UploadImagen runat="server" id="UploadImagen" />
+        <br /><hr /><br />
+        <uc2:VerFotos runat="server" id="VerFotos" />
     </div>
     </form>
 </body>

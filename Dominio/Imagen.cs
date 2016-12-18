@@ -17,10 +17,7 @@ namespace Dominio
         {
 
         }
-
-        //Image image = Image.FromFile(fileName);
-        //Image thumb = image.GetThumbnailImage(120, 120, () => false, IntPtr.Zero);
-        //thumb.Save(Path.ChangeExtension(fileName, "thumb"));
+        
 
     }
 }

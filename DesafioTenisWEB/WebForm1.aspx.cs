@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Logica;
+using Dominio;
 
 namespace DesafioTenisWEB
 {
@@ -11,7 +13,7 @@ namespace DesafioTenisWEB
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["Logueado"] = LogicaJugador.FindAll().FirstOrDefault();
         }
     }
 }

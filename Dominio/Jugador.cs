@@ -15,15 +15,24 @@ namespace Dominio
         public string Sexo { get; set; }        
         public string Email { get; set; }
         public string Password { get; set; }
+        public string Celular { get; set; }
+        public DateTime? FechaNacimiento { get; set; }
+
         public bool Manana { get; set; }
         public bool Tarde { get; set; }
         public bool Noche { get; set; }        
-        public string Foto { get; set; }
-        public int RankingSingle { get; set; }        
-        public DateTime? FechaNacimiento { get; set; }
-        public string Celular { get; set; }
-        public bool Estado { get; set; }
-        public int Puntaje { get; set; }
+
+        public int FotoId { get; set; }
+
+        public int RankingSingle { get; set; }
+        public int PuntajeSingle { get; set; }
+        public int RankingDoble { get; set; }
+        public int PuntajeDoble { get; set; }
+        
+        
+        public bool Habilitado { get; set; }
+        public bool EmailConfirmado { get; set; }
+        
 
         public virtual ICollection<Campeonato> Campeonatos { get; set; }
         

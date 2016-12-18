@@ -7,36 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DesafioTenisWEB {
+namespace DesafioTenisWEB.UserControls {
     
     
-    public partial class WebForm1 {
+    public partial class VerFotos {
         
         /// <summary>
-        /// form1 control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Image Image1;
         
         /// <summary>
-        /// UploadImagen control.
+        /// RepeaterFotos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DesafioTenisWEB.UserControls.UploadImagen UploadImagen;
-        
-        /// <summary>
-        /// VerFotos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DesafioTenisWEB.UserControls.VerFotos VerFotos;
+        protected global::System.Web.UI.WebControls.DataList RepeaterFotos;
     }
 }

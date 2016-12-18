@@ -126,6 +126,10 @@ namespace Persistencia
                     db.SaveChanges();
                 }
             }
+            catch (Exception ex)
+            {
+
+            }
         }
 
 
