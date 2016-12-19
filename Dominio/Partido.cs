@@ -17,12 +17,22 @@ namespace Dominio
         public bool Confirmado { get; set; }
         public bool Terminado { get; set; }
         public bool Cancelado { get; set; }
-        public bool EstaComentado { get; set; }
+        public bool EstaComentadoJugadorDesafiante { get; set; }
+        public bool EstaComentadoJugadorDesafiado { get; set; }
 
-        
+
         public virtual Jugador JugadorDesafiante { get; set; }
         public virtual Jugador JugadorDesafiado { get; set; }        
         public virtual Jugador Ganador { get; set; }
+
+        public Jugador OtroJugador(int jugadorId)
+        {
+            if (JugadorDesafiado.JugadorId == jugadorId)
+                return JugadorDesafiante;
+            else if (JugadorDesafiante.JugadorId == jugadorId)
+                return JugadorDesafiado;
+            return null;
+        }
 
         public Partido() { }
     }

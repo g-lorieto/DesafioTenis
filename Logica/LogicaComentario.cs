@@ -10,9 +10,9 @@ namespace Logica
 {
     public static class LogicaComentario
     {
-        public static void Add(Comentario c)
+        public static void Add(Comentario c, int comentadoId, int partidoId, bool? gano)
         {
-            PersistenciaComentario.Add(c);
+            PersistenciaComentario.Add(c, comentadoId, partidoId, gano);
         }
         public static void Update(Comentario c)
         {

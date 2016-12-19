@@ -212,6 +212,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UserControls\CalificarPartido.ascx" />
     <Content Include="UserControls\MensajeNuevo.ascx" />
     <Content Include="UserControls\PartidosPerfil.ascx" />
     <Content Include="UserControls\PerfilTop.ascx" />
@@ -425,6 +426,13 @@
     </Compile>
     <Compile Include="UserControls\ActualizarDatos.ascx.designer.cs">
       <DependentUpon>ActualizarDatos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CalificarPartido.ascx.cs">
+      <DependentUpon>CalificarPartido.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CalificarPartido.ascx.designer.cs">
+      <DependentUpon>CalificarPartido.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Categorias.ascx.cs">
       <DependentUpon>Categorias.ascx</DependentUpon>

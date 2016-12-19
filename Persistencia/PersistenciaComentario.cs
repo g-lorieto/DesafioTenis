@@ -14,7 +14,7 @@ namespace Persistencia
     public class PersistenciaComentario
     {
 
-        public static void Add(Comentario c)
+        public static void Add(Comentario c, int comentadoId, int partidoId, bool? gano)
         {
             try
             {
@@ -22,7 +22,23 @@ namespace Persistencia
                 {
                     if (!db.Comentarios.Contains(c))
                     {
+                        var comentado = db.Jugadores.FirstOrDefault(x => x.JugadorId == comentadoId);
+                        c.Comentado = comentado;
+                        
                         db.Comentarios.Add(c);
+
+                        var partido = db.Partidos.FirstOrDefault(x => x.PartidoId == partidoId);
+
+                        var comentante = partido.OtroJugador(comentadoId);
+
+                        if (partido.JugadorDesafiado.JugadorId != comentante.JugadorId)
+                            partido.EstaComentadoJugadorDesafiante = true;
+                        else
+                            partido.EstaComentadoJugadorDesafiado = true;
+
+                        if (gano != null)
+                            partido.Ganador = gano == true ? comentante : comentado;
+                        
                         db.SaveChanges();
                     }
                 }

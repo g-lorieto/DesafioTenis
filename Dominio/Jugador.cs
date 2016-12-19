@@ -46,8 +46,7 @@ namespace Dominio
         {
             return NombreCompleto();
         }
-
-
+        
         public override bool Equals(object obj)
         {
             return this.Email == ((Jugador)obj).Email;
